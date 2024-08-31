@@ -10,9 +10,9 @@ public class SudSobre extends Paquete {
     @Override
     public Double calcularValor(){
         if(super.getDhl()){
-            return 15000.0*0.25;
+            return 15000.0*0.25*getCantidad();
         }
-        return 15000.0;
+        return 15000.0*getCantidad();
     }
 
 }

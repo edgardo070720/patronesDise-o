@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     private static GuiaService service = new GuiaService();
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int opction;
         int control=0;
@@ -17,7 +18,7 @@ public class Main {
             opction = sc.nextInt();
             switch(opction) {
                 case 1:guiaSeve();break;
-                case 2:;break;
+                case 2:registrarEntrega();break;
                 case 3:guiasConsult();break;
                 case 4:control=1;break;
                 default: System.out.println("¡Invalid option!");
@@ -34,7 +35,7 @@ public class Main {
         System.out.println("----------------------");
     }
     public static void guiaSeve(){
-        Scanner sc = new Scanner(System.in);
+
         Remitente remitente = new Remitente();
         Destinatario destinatario = new Destinatario();
         Paquete paquete;
@@ -101,7 +102,6 @@ public class Main {
 
     }
     private static boolean definirDhl(){
-        Scanner sc = new Scanner(System.in);
         char optionDhl='f';
 
         while (optionDhl!='s'||optionDhl!='n') {
@@ -133,6 +133,12 @@ public class Main {
             System.out.println("error: "+service.getListGuia().getMessage());
         }
 
+
+    }
+    private static void registrarEntrega(){
+        System.out.println("----------Registrar Entrega------");
+        System.out.println("ingrese numero de envio: ");
+        System.out.println(service.updateStateGuia(Integer.parseInt(sc.nextLine())));
 
     }
 

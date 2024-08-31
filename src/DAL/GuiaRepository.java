@@ -1,23 +1,26 @@
 package DAL;
 import Entity.*;
 
+import java.awt.font.FontRenderContext;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GuiaRepository {
     private final String fileName;
+    private boolean fileAppend;
     DestinatarioRepository destinatarioRepository;
     RemitenteRepository remitenteRepository;
     PaqueteRepository paqueteRepository;
     public GuiaRepository() {
+        this.fileAppend = true;
         this.fileName = "data/GUIAS.txt";
         destinatarioRepository = new DestinatarioRepository();
         remitenteRepository = new RemitenteRepository();
         paqueteRepository = new PaqueteRepository();
     }
     public void guardarGuia(Guia guia) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, fileAppend));
         bw.write(guia.toString());
         bw.newLine();
         bw.close();
@@ -46,5 +49,28 @@ public class GuiaRepository {
         }
         br.close();
         return guias;
+    }
+    public Guia searchGuia(int numEnvio) throws IOException {
+        List<Guia> guias = getGuias();
+        for(Guia guia : guias) {
+            if(guia.getNumEnvio()==numEnvio) {
+                return guia;
+            }
+        }
+        return null;
+    }
+    public void deleteGuia(int numEnvio) throws IOException {
+        this.fileAppend = false;
+        List<Guia> guias = getGuias();
+        for(Guia g : guias) {
+            if(numEnvio!=g.getNumEnvio()) {
+                guardarGuia(g);
+            }
+        }
+        this.fileAppend = true;
+    }
+    public void updateGuia(Guia guia) throws IOException {
+        deleteGuia(guia.getNumEnvio());
+        guardarGuia(guia);
     }
 }

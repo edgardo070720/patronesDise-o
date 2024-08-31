@@ -1,2 +1,10 @@
 45687,unicesar,rafael,31 #21-5,primero de mayo,valledupar,cesar,colombia,20003,17
 458646,coca cola,juan ramoa,29 #29-03,7 de agosto,valledupar,cesar,colombia,20001,15
+458646,coca cola,juan ramoa,29 #29-03,7 de agosto,valledupar,cesar,colombia,20001,15
+45687,unicesar,rafael,31 #21-5,primero de mayo,valledupar,cesar,colombia,20003,17
+945,envia,jose,24 #15-32,garupal,valledupar,cesar,colombia,20001,13
+45687,unicesar,rafael,31 #21-5,primero de mayo,valledupar,cesar,colombia,20003,17
+945,envia,jose,24 #15-32,garupal,valledupar,cesar,colombia,20001,13
+458646,coca cola,juan ramoa,29 #29-03,7 de agosto,valledupar,cesar,colombia,20001,15
+458646,coca cola,juan ramoa,29 #29-03,7 de agosto,valledupar,cesar,colombia,20001,15
+945,envia,jose,24 #15-32,garupal,valledupar,cesar,colombia,20001,13

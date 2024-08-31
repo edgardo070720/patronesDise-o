@@ -1,2 +1,10 @@
 12345,edgardo,sistemas,3125468,17
 54648,luis ramos,ventas,318346864,15
+54648,luis ramos,ventas,318346864,15
+12345,edgardo,sistemas,3125468,17
+156,raul,ventas,3466565,13
+12345,edgardo,sistemas,3125468,17
+156,raul,ventas,3466565,13
+54648,luis ramos,ventas,318346864,15
+54648,luis ramos,ventas,318346864,15
+156,raul,ventas,3466565,13

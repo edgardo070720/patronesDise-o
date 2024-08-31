@@ -24,9 +24,9 @@ public class GuiaRepository {
         bw.write(guia.toString());
         bw.newLine();
         bw.close();
-        destinatarioRepository.guardarDestinatario(guia.getNumEnvio(),guia.getDestinatario());
-        remitenteRepository.guardarRemitente(guia.getRemitente(),guia.getNumEnvio());
-        paqueteRepository.guardarPaquete(guia.getPaquete(),guia.getNumEnvio());
+        destinatarioRepository.guardarDestinatario(guia.getNumEnvio(),guia.getDestinatario(),fileAppend);
+        remitenteRepository.guardarRemitente(guia.getRemitente(),guia.getNumEnvio(),fileAppend);
+        paqueteRepository.guardarPaquete(guia.getPaquete(),guia.getNumEnvio(),fileAppend);
     }
 
     public List<Guia> getGuias() throws IOException {

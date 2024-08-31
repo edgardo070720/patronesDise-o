@@ -12,8 +12,8 @@ public class PaqueteRepository {
     public PaqueteRepository() {
         this.fileName = "data/paquete.txt";
     }
-    public void guardarPaquete(Paquete paquete,int numEnvio) throws IOException {
-        BufferedWriter bw= new BufferedWriter(new FileWriter(fileName,true));
+    public void guardarPaquete(Paquete paquete,int numEnvio,boolean fileAppend) throws IOException {
+        BufferedWriter bw= new BufferedWriter(new FileWriter(fileName,fileAppend));
         bw.write(paquete.toString()+","+numEnvio);
         bw.newLine();
         bw.close();

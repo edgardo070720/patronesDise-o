@@ -9,8 +9,8 @@ public class RemitenteRepository {
     public RemitenteRepository() {
         this.fileName = "data/remitentes.txt";
     }
-    public void  guardarRemitente(Remitente remitente,int numEnvio) throws IOException {
-        BufferedWriter bw= new BufferedWriter(new FileWriter(fileName,true));
+    public void  guardarRemitente(Remitente remitente,int numEnvio,boolean fileAppend) throws IOException {
+        BufferedWriter bw= new BufferedWriter(new FileWriter(fileName,fileAppend));
         bw.write(remitente.toString()+","+numEnvio);
         bw.newLine();
         bw.close();
